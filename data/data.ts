@@ -1,33 +1,33 @@
-export const appartmentTypeData = [
+export const ApartmentTypeData = [
   {
     id: 1,
-    icon: "/images/a1.png",
+    icon: "/images/A1.jpg",
     type: "House",
-    number: 12,
+    number: 700,
   },
   {
     id: 2,
-    icon: "/images/a2.png",
-    type: "Appartments",
-    number: 22,
+    icon: "/images/A5.jpg",
+    type: "Apartments",
+    number: 2520,
   },
   {
     id: 3,
-    icon: "/images/a3.png",
+    icon: "/images/A3.jpg",
     type: "Office",
-    number: 14,
+    number: 595,
   },
   {
     id: 4,
-    icon: "/images/a4.png",
+    icon: "/images/A4.jpg",
     type: "Villa",
-    number: 9,
+    number: 348,
   },
   {
     id: 5,
-    icon: "/images/a5.png",
+    icon: "/images/A2.jpg",
     type: "TownHouse",
-    number: 12,
+    number: 1000,
   },
 ];
 

@@ -1,39 +1,17 @@
 "use client";
+import { navlink } from "@/constant/constant";
 import logo from "@/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 
-const Desknav = () => {
-  const navlink = [
-    {
-      id: 1,
-      label: "Home",
-      url: "#",
-    },
-    {
-      id: 2,
-      label: "Top Deals",
-      url: "#",
-    },
-    {
-      id: 3,
-      label: "Listing",
-      url: "#",
-    },
-    {
-      id: 4,
-      label: "Contact",
-      url: "#",
-    },
-    {
-      id: 5,
-      label: "About",
-      url: "#",
-    },
-  ];
+type Props = {
+  showNav: () => void;
+}
 
+const Desknav = ({ showNav }: Props) => {
+  
   // static navbar on scroll
   const [scrollNav, setScrollNav] = useState(false);
   useEffect(() => {
@@ -49,7 +27,7 @@ const Desknav = () => {
   }, []);
 
   return (
-    <div className={`fixed ${scrollNav ? 'bg-gray-600': ""} h-[10vh] z-[100] transition-all duration-200 w-full bg-rose-900`}>
+    <div className={`fixed ${scrollNav ? 'bg-gray-600': ""} h-[10vh] z-[100] transition-all duration-200 w-full `}>
       <div className="flex items-center h-full justify-between w-[95%] sm:w-[90%] mx-auto">
         <div className="flex items-center">
           <Image className="w-6 mr-3 " src={logo} alt="logo" />
@@ -70,7 +48,7 @@ const Desknav = () => {
         {/* Login or Signin */}
         <div className="flex items-center space-x-2">
           <button className="btn bg-white rounded-md px-3 py-1">Login</button>
-          <HiMenuAlt3
+          <HiMenuAlt3 onClick={showNav}
             size={28}
             className="text-white lg:hidden cursor-pointer"
           />

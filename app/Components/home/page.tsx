@@ -1,9 +1,12 @@
 import React from 'react';
+import Banner from './Banner/Banner';
+import ApartmentType from './ApartmentType/ApartmentType';
 
 const Homepage = () => {
   return (
     <div>
-      <h1 className='text-4xl h-[2000px] text-green-400'>Welcome to the Horizon</h1>
+      <Banner></Banner>
+      <ApartmentType></ApartmentType>
     </div>
   );
 };
