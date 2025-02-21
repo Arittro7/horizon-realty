@@ -15,7 +15,7 @@ type Props = {
 const ReviewCard = ({ review }: Props) => {
   return (
     <div className="bg-white rounded-lg m-3 p-6 relative">
-      <FaQuoteRight className="w-12 h-12 text-rose-700 absolute top-4 right-44 opacity-30" />
+      <FaQuoteRight className="w-12 h-12 text-rose-700 absolute top-4 right-4 md:right-44 opacity-30" />
       <div className="mt-10 flex items-center">
         <FaStar className="w-4 h-4 text-yellow-400" />
         <FaStar className="w-4 h-4 text-yellow-400" />

@@ -180,7 +180,7 @@ export const blogs = [
     comment: "Comments (3)",
     title: "Find the Perfect Advertiser for Your Needs",
     shortDescription:
-      "Find the right advertiser to effectively boost your business.",
+      "Find the right advertiser to effectively boost your business to get countless clients",
     image: "/images/p1.jpg",
   },
   {

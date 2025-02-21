@@ -5,6 +5,7 @@ import Property from './Property/Property';
 import CityProperties from './CityProperties/CityProperties';
 import PropertyFeatures from './PropertyFeatures/PropertyFeatures';
 import Reviews from './Reviews/Reviews';
+import Blog from './Blog/Blog';
 
 const Homepage = () => {
   return (
@@ -15,6 +16,7 @@ const Homepage = () => {
       <CityProperties></CityProperties>
       <PropertyFeatures></PropertyFeatures>
       <Reviews></Reviews>
+      <Blog></Blog>
     </div>
   );
 };
