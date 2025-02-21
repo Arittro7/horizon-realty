@@ -8,10 +8,9 @@ import { HiMenuAlt3 } from "react-icons/hi";
 
 type Props = {
   showNav: () => void;
-}
+};
 
 const Desknav = ({ showNav }: Props) => {
-  
   // static navbar on scroll
   const [scrollNav, setScrollNav] = useState(false);
   useEffect(() => {
@@ -21,13 +20,17 @@ const Desknav = ({ showNav }: Props) => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () =>{
-      window.removeEventListener("scroll", handleScroll)
-    }
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
-    <div className={`fixed ${scrollNav ? 'bg-gray-600': ""} h-[10vh] z-[100] transition-all duration-200 w-full `}>
+    <div
+      className={`fixed ${
+        scrollNav ? "bg-gray-600" : ""
+      } h-[10vh] z-[100] transition-all duration-200 w-full `}
+    >
       <div className="flex items-center h-full justify-between w-[95%] sm:w-[90%] mx-auto">
         <div className="flex items-center">
           <Image className="w-6 mr-3 " src={logo} alt="logo" />
@@ -48,7 +51,8 @@ const Desknav = ({ showNav }: Props) => {
         {/* Login or Signin */}
         <div className="flex items-center space-x-2">
           <button className="btn bg-white rounded-md px-3 py-1">Login</button>
-          <HiMenuAlt3 onClick={showNav}
+          <HiMenuAlt3
+            onClick={showNav}
             size={28}
             className="text-white lg:hidden cursor-pointer"
           />
