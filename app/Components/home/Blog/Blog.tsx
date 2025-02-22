@@ -11,8 +11,12 @@ const Blog = () => {
         subHeading="We have a lot of interesting things to share with you"
         ></SectionHeading>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-16 gap-6 items-center">
-          {blogs.map((blog) =>{
-            return <div key={blog.id}>
+          {blogs.map((blog,i) =>{
+            return <div key={blog.id}
+            data-aos="fade-out" 
+            data-aos-delay={`${i * 150}`}
+            data-aos-anchor-placement ="top-center"
+            >
               <BlogCard blog={blog}></BlogCard>
             </div>
           })}

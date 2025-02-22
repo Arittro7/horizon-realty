@@ -11,9 +11,13 @@ const Property = () => {
         subHeading="We have a wide range of properties for you to choose from"
         ></SectionHeading>
         <div className="mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-center">
-          {properties.map((property) => {
+          {properties.map((property, i) => {
             return  (
-            <div key={property.id}>
+            <div key={property.id}
+            data-aos="fade-up" 
+            data-aos-delay={`${i * 150}`}
+            data-aos-anchor-placement ="top-center"
+            >
               <PropertyCard property={property}></PropertyCard>
             </div>
             )
